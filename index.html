@@ -3,21 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello</title>
+  <title>[Your Name] · Personal Site</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Hello, world.</h1>
+  <header class="profile-header">
+    <div class="profile-header__identity">
+      <div class="avatar">
+        <!-- Swap this for <img src="..." alt="[Your Name]"> once you have a photo. -->
+        <span class="avatar__label">[Photo]</span>
+      </div>
+      <div class="profile-header__text">
+        <h1 class="profile-name">Ethan Luu</h1>
+        <p class="profile-bio">[One or two sentence description of yourself.]</p>
+      </div>
+    </div>
 
-  <p>
-    This page is live. That is the only thing it is here to prove.
-  </p>
+    <div class="level-badge">
+      <span class="level-badge__label">Level</span>
+      <span class="level-badge__value" aria-label="Level 23">23</span>
+    </div>
+  </header>
 
-  <p>
-    Everything about it is yours to delete. Open Claude Code in this folder and
-    tell it what you actually want to build.
-  </p>
+  <div class="page-body">
+
+    <main class="main-column">
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Recent Projects</h2>
+
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-card__thumb" aria-hidden="true">[Image]</div>
+            <div class="project-card__body">
+              <div class="project-card__row">
+                <h3 class="project-card__title">[Project Name]</h3>
+                <div class="project-card__stats">
+                  <p>[X] hrs on record</p>
+                  <p>last played on [Month Day]</p>
+                </div>
+              </div>
+              <p class="project-card__desc">[One sentence about what this project does and what you used to build it.]</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb" aria-hidden="true">[Image]</div>
+            <div class="project-card__body">
+              <div class="project-card__row">
+                <h3 class="project-card__title">[Project Name]</h3>
+                <div class="project-card__stats">
+                  <p>[X] hrs on record</p>
+                  <p>last played on [Month Day]</p>
+                </div>
+              </div>
+              <p class="project-card__desc">[One sentence about what this project does and what you used to build it.]</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb" aria-hidden="true">[Image]</div>
+            <div class="project-card__body">
+              <div class="project-card__row">
+                <h3 class="project-card__title">[Project Name]</h3>
+                <div class="project-card__stats">
+                  <p>[X] hrs on record</p>
+                  <p>last played on [Month Day]</p>
+                </div>
+              </div>
+              <p class="project-card__desc">[One sentence about what this project does and what you used to build it.]</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="view-all"><a href="#">View all recent projects</a></p>
+      </section>
+    </main>
+
+    <aside class="sidebar" aria-label="Site sections">
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Screenshots</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Workshop Items</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Artwork</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
 
 </body>
 </html>
