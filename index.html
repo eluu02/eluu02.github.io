@@ -32,69 +32,30 @@
       <section aria-labelledby="projects-heading">
         <h2 id="projects-heading">Recent Projects</h2>
 
-        <div class="project-list">
-          <article class="project-card">
-            <div class="project-card__thumb" aria-hidden="true">[Image]</div>
-            <div class="project-card__body">
-              <div class="project-card__row">
-                <h3 class="project-card__title">[Project Name]</h3>
-                <div class="project-card__stats">
-                  <p>[X] hrs on record</p>
-                  <p>last played on [Month Day]</p>
-                </div>
-              </div>
-              <p class="project-card__desc">[One sentence about what this project does and what you used to build it.]</p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__thumb" aria-hidden="true">[Image]</div>
-            <div class="project-card__body">
-              <div class="project-card__row">
-                <h3 class="project-card__title">[Project Name]</h3>
-                <div class="project-card__stats">
-                  <p>[X] hrs on record</p>
-                  <p>last played on [Month Day]</p>
-                </div>
-              </div>
-              <p class="project-card__desc">[One sentence about what this project does and what you used to build it.]</p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__thumb" aria-hidden="true">[Image]</div>
-            <div class="project-card__body">
-              <div class="project-card__row">
-                <h3 class="project-card__title">[Project Name]</h3>
-                <div class="project-card__stats">
-                  <p>[X] hrs on record</p>
-                  <p>last played on [Month Day]</p>
-                </div>
-              </div>
-              <p class="project-card__desc">[One sentence about what this project does and what you used to build it.]</p>
-            </div>
-          </article>
+        <div class="project-list" id="project-list">
+          <p class="project-list__status">Loading recent projects&hellip;</p>
         </div>
+        <noscript>
+          <p>Enable JavaScript to see recent projects pulled live from GitHub, or <a href="https://github.com/eluu02?tab=repositories">view them directly on GitHub</a>.</p>
+        </noscript>
 
-        <p class="view-all"><a href="#">View all recent projects</a></p>
+        <p class="view-all"><a href="https://github.com/eluu02?tab=repositories">View all recent projects</a></p>
       </section>
     </main>
 
     <aside class="sidebar" aria-label="Site sections">
       <nav>
         <ul class="sidebar-nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Screenshots</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Workshop Items</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Guides</a></li>
-          <li><a href="#">Artwork</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/eluu02">GitHub</a></li>
+          <li><a href="contact.html">Contact Information</a></li>
         </ul>
       </nav>
     </aside>
 
   </div>
+
+  <script src="projects.js" defer></script>
 
 </body>
 </html>

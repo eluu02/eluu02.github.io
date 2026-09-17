@@ -150,6 +150,11 @@ a:focus-visible,
   padding: var(--space-3);
 }
 
+.project-list__status {
+  color: var(--color-muted);
+  margin: 0;
+}
+
 .project-card {
   display: grid;
   grid-template-columns: 9rem 1fr;
@@ -234,6 +239,20 @@ a:focus-visible,
 .sidebar-nav a:hover,
 .sidebar-nav a:focus-visible {
   border-bottom-color: var(--color-accent);
+}
+
+/* Simple standalone pages (About, Contact): deliberately not the homepage's
+   header/grid/sidebar - just a centered content column of their own. */
+
+.simple-page {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: var(--space-5) var(--space-3);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: var(--space-4);
 }
 
 /* Small screens: stack the header, drop to one column, projects before sidebar links. */
