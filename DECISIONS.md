@@ -48,6 +48,7 @@ check in order to notice. Being honest here costs you far less than a story you 
 defend when you record your video.
 
 *Your answer here.*
+    - None so far
 
 ---
 
@@ -61,7 +62,6 @@ A check that could not have failed is not a check.
 Link to your `verification/` folder.
 
 *Your answer here.*
-    - TODO: Screenshot with link and live page
 
 ---
 
