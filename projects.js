@@ -17,11 +17,6 @@
     var article = document.createElement("article");
     article.className = "project-card";
 
-    var thumb = document.createElement("div");
-    thumb.className = "project-card__thumb";
-    thumb.setAttribute("aria-hidden", "true");
-    thumb.textContent = "[Image]";
-
     var body = document.createElement("div");
     body.className = "project-card__body";
 
@@ -53,7 +48,6 @@
 
     body.appendChild(row);
     body.appendChild(desc);
-    article.appendChild(thumb);
     article.appendChild(body);
     return article;
   }
