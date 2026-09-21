@@ -59,7 +59,7 @@ p {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 a:focus-visible,
@@ -200,10 +200,9 @@ a:focus-visible,
 }
 
 .sidebar {
-  border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
-  background: var(--color-surface);
-  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .sidebar-nav {
@@ -228,7 +227,7 @@ a:focus-visible,
   border-bottom-color: var(--color-accent);
 }
 
-/* Simple standalone pages (About, Contact): deliberately not the homepage's
+/* Simple standalone pages (About, Skills): deliberately not the homepage's
    header/grid/sidebar - just a centered content column of their own. */
 
 .simple-page {
@@ -240,6 +239,38 @@ a:focus-visible,
 .back-link {
   display: inline-block;
   margin-bottom: var(--space-4);
+}
+
+.content-box {
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  padding: var(--space-3);
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.contact-line + .contact-line {
+  margin-top: var(--space-2);
+}
+
+.contact-line p {
+  margin: 0;
+}
+
+.contact-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--color-muted);
+}
+
+.contact-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* Small screens: stack the header, drop to one column, projects before sidebar links. */

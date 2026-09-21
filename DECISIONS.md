@@ -15,6 +15,9 @@ What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
 *Your answer here.*
+    - Wanted: Portfolio website that is formatted similar to a steam profile, appeal to gamers and hiring teams
+    - Automatically updating recent projects section from personal GitHub profile
+    - Dropped: Steam badge boxes, recent project progress (achievements)
 
 ---
 
@@ -29,6 +32,8 @@ Say which you picked, what the alternative was, and what you gave up by not taki
 "There was no alternative" is not an answer. Find the fork.
 
 *Your answer here.*
+    - Picked: Fetch and update recent projects when opening site
+    - Alternative: Scheduled GitHub Actions workflow that periodically calls GitHub API and commits result as static HTML/JSON, avoids depending on GitHub API being reachable but adds toolchain complexity. Manual curation, hand editing recent project cards.
 
 ---
 
@@ -56,6 +61,7 @@ A check that could not have failed is not a check.
 Link to your `verification/` folder.
 
 *Your answer here.*
+    - TODO: Screenshot with link and live page
 
 ---
 
