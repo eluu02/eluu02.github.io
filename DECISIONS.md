@@ -15,10 +15,12 @@ What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
 *Your answer here.*
-    - Wanted: Portfolio website that is formatted similar to a steam profile, appeal to gamers and hiring teams, simple to navigate
-    - Automatically updating recent projects section from personal GitHub profile
-    - Dropped: Content boxes containing Steam badges and achievement as I was not sure how to implement into my design without bloating page
-    with random content.
+
+- Before development, I wanted to portfolio website that is formatted based on the Steam community profile as I find it simple and pleasant to use, with the goal of appealing to other gamers and hiring teams. The main feature that attracted me was the automatically updating recently played games which I adapted to pull my three most recent GitHub projects
+    
+- What is live now is a completed portfolio using a Steam profile template with extra content boxes for badges and achievements removed. I adapted the sidebar to contain an About page, Skills page, and links to my GitHub and resume. The friends content box is adapted to be a Contact Information section containing links to my e-mails, LinkedIn, and general location.
+
+- The main thing I dropped during development are the content boxes containing achievements and badges as I wasn't sure how to adapt them into my design without bloating the page with unnecessary content. I also dropped the Contact Information page as there was not enough content to justify having its own page so I included this section on the main page in a small content box.
 
 ---
 
@@ -33,8 +35,10 @@ Say which you picked, what the alternative was, and what you gave up by not taki
 "There was no alternative" is not an answer. Find the fork.
 
 *Your answer here.*
-    - Picked: Fetch and update recent projects when opening site
-    - Alternative: Scheduled GitHub Actions workflow that periodically calls GitHub API and commits result as static HTML/JSON, avoids depending on GitHub API being reachable but adds toolchain complexity. Manual curation, hand editing recent project cards.
+
+- The first fork was deciding whether to use one page to contain all content or create extra pages for each section. I ended up creating extra pages, one for About and one for Skills. By having multiple pages, I may have given up attractability as the user will have to navigate different tabs rather than having everything in one place but due to the simplicity of the page, this should not be an issue.
+
+- The second fork was in developing the recent projects section and picking the approach to automatically update projects with the most recent. I chose a simple fetch and update by calling the GitHub API when opening the site. An alternative was a scheduled GitHub Actions workflow that periodically calls the GitHub API and commits the result as a static HTML/JSON file. The benefit to this would be avoiding depending on the GitHub API being reachable but this would add unnecessary toolchain complexity for a project of this scale. Another alternative was editing the recent project cards by hand though this would require constant updates to the code which is redundant.
 
 ---
 
@@ -49,7 +53,8 @@ check in order to notice. Being honest here costs you far less than a story you 
 defend when you record your video.
 
 *Your answer here.*
-    - Only made minor modifications to what Claude provided such as bodies of text.
+
+- The only times I overruled the agent was in minor design choices such as color scheme as well content box placement and sizing. Well-detailed prompts prevented the agent from hallucinating and adding unwanted features and content. I likely would have had to implement the GitHub Actions workflow alternative mentioned above where the agent would have more room to hallucinate due to the added complexity.
 
 ---
 
@@ -64,6 +69,11 @@ Link to your `verification/` folder.
 
 *Your answer here.*
 
+- I ran two simple checks. The first is fetching the live URL and obtaining a 200 response stored in /verification/fetch.txt. The second check is a screenshot of the rendered page in a browser with the URL visible.
+- fetch.txt showed the 200 response and the HTML file matching my current code. The screenshot shows that the page rendered correctly and at the correct URL.
+- One thing that could have made this check fail is fetching the site immediately after pushing changes so the site rendered incorrectly until GitHub Pages finished deploying.
+- Path to verification: [eluu02.github.io/verification/](verification/)
+
 ---
 
 ## 5. What is still wrong
@@ -74,3 +84,6 @@ fully understand.
 What would you do next, and how would you find out?
 
 *Your answer here.*
+
+- The main issue is that the site is unpolished. The design is simple so no major changes are needed but the lists in the Skills page and paragraphs in About page need cleaning up.
+- The next steps would be the polish the design to make the site more aesthetically pleasing as well as cleaning up the About and Skill pages. Then, I would like to add additional details such my social platforms and content boxes with automatically updated stats, photos, etc.
