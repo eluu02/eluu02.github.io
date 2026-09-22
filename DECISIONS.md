@@ -15,9 +15,10 @@ What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
 *Your answer here.*
-    - Wanted: Portfolio website that is formatted similar to a steam profile, appeal to gamers and hiring teams
+    - Wanted: Portfolio website that is formatted similar to a steam profile, appeal to gamers and hiring teams, simple to navigate
     - Automatically updating recent projects section from personal GitHub profile
-    - Dropped: Steam badge boxes, recent project progress (achievements)
+    - Dropped: Content boxes containing Steam badges and achievement as I was not sure how to implement into my design without bloating page
+    with random content.
 
 ---
 
@@ -48,7 +49,7 @@ check in order to notice. Being honest here costs you far less than a story you 
 defend when you record your video.
 
 *Your answer here.*
-    - None so far
+    - Only made minor modifications to what Claude provided such as bodies of text.
 
 ---
 
