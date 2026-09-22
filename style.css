@@ -29,11 +29,23 @@
 
 body {
   font-family: var(--font-sans);
-  background: var(--color-bg);
+  background: var(--color-bg) url(photos/web/background2.jpg) center / cover fixed no-repeat;
   color: var(--color-text);
   line-height: 1.6;
   font-size: 1.125rem;
   margin: 0;
+}
+
+/* The background image only shows raw at the true page edges. Inside the
+   content column, these containers put a translucent, blurred backdrop
+   over it; the opaque boxes nested inside them (.content-box, .project-list,
+   .sidebar, .avatar) still fully cover it same as before. */
+.profile-header,
+.page-body,
+.simple-page {
+  background: rgba(21, 24, 28, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 h1 {
