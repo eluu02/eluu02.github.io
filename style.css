@@ -34,6 +34,12 @@ body {
   line-height: 1.6;
   font-size: 1.125rem;
   margin: 0;
+  /* Full-height grid so the second row can absorb the leftover viewport height.
+     Grid, not flex: these children center themselves with max-width plus auto
+     inline margins, which flex would collapse to their content width. */
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 /* The background image only shows raw at the true page edges. Inside the
@@ -82,12 +88,18 @@ a:focus-visible,
 
 /* Header: avatar + name/bio on the left, age badge on the right. */
 
+/* width plus border-box is what keeps this the same width as .page-body below
+   it: as an item of the body grid, the auto inline margins alone would shrink
+   it to its own content. The max-width is 68.75rem of content plus the 3rem of
+   horizontal padding. */
 .profile-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--space-3);
-  max-width: 68.75rem; /* 1100px */
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 71.75rem; /* 1148px */
   margin-inline: auto;
   padding: var(--space-5) var(--space-3) var(--space-4);
 }
@@ -149,6 +161,9 @@ a:focus-visible,
 
 /* Body: ~65/35 two-column grid, main projects feed + sidebar link list. */
 
+/* Sits in the body grid's 1fr row, so the blurred panel reaches the bottom of
+   the window instead of stopping at its content and letting a strip of raw
+   background show through. */
 .page-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.5385fr);
