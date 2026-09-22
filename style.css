@@ -338,6 +338,40 @@ a:focus-visible,
   color: var(--color-accent);
 }
 
+/* A shelf of Steam library capsules nested inside the Hobbies content box. Filled with
+   --color-bg rather than --color-surface so the inner box reads as distinct from the
+   outer one, the same trick .slideshow__arrow uses. */
+.game-shelf {
+  margin-top: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-bg);
+  padding: var(--space-3);
+}
+
+.game-shelf__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: var(--space-2);
+}
+
+/* The art is hotlinked from Steam, so the wrapper owns the 2:3 slot and a filled
+   background: if a request fails the row keeps its shape instead of collapsing. */
+.game-shelf__cover {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+}
+
+.game-shelf__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Small screens: stack the header, drop to one column, projects before sidebar links. */
 
 @media (max-width: 40rem) {
