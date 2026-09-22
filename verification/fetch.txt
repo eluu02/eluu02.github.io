@@ -1,0 +1,112 @@
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Tue, 22 Sep 2026 00:07:09 GMT
+access-control-allow-origin: *
+strict-transport-security: max-age=31556952
+etag: "6ab1c6ad-ec3"
+expires: Tue, 22 Sep 2026 00:41:22 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 3688:20AFAA:466ABA:4AEF1F:6AB1CC5A
+x-github-edge-region: iad
+accept-ranges: bytes
+date: Tue, 22 Sep 2026 00:31:28 GMT
+via: 1.1 varnish
+age: 5
+x-served-by: cache-dfw-kdfw8210109-DFW
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1790037088.070009,VS0,VE2
+vary: Accept-Encoding
+x-fastly-request-id: c6c9774ee4ee0db07bde0321c4ac5179331d3ebb
+content-length: 3779
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ethan Luu · Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="profile-header">
+    <div class="profile-header__identity">
+      <div class="avatar">
+        <img src="photos/main_pfp.jpeg" alt="Ethan Luu">
+      </div>
+      <div class="profile-header__text">
+        <h1 class="profile-name">Ethan Luu</h1>
+        <p class="profile-bio">Graduate student at the Colorado School of Mines</p>
+      </div>
+    </div>
+
+    <div class="level-badge">
+      <span class="level-badge__label">Level (Age)</span>
+      <span class="level-badge__value" aria-label="Level (Age) 23">23</span>
+    </div>
+  </header>
+
+  <div class="page-body">
+
+    <main class="main-column">
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Recent Projects</h2>
+
+        <div class="project-list" id="project-list">
+          <p class="project-list__status">Loading recent projects&hellip;</p>
+        </div>
+        <noscript>
+          <p>Enable JavaScript to see recent projects pulled live from GitHub, or <a href="https://github.com/eluu02?tab=repositories">view them directly on GitHub</a>.</p>
+        </noscript>
+
+        <p class="view-all"><a href="https://github.com/eluu02?tab=repositories">View all projects</a></p>
+      </section>
+    </main>
+
+    <aside class="sidebar" aria-label="Site sections">
+      <div class="content-box">
+        <nav>
+          <ul class="sidebar-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume/eluu_resume.pdf">Resume</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="https://github.com/eluu02">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content-box">
+        <h3>Contact</h3>
+
+        <div class="contact-line">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </span>
+          <p><a href="https://www.linkedin.com/in/eluu02/">linkedin.com/in/eluu02</a></p>
+        </div>
+
+        <div class="contact-line">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <p><a href="mailto:ethan_luu@mines.edu">ethan_luu@mines.edu</a> &middot; <a href="mailto:ethanluu02@yahoo.com">ethanluu02@yahoo.com</a></p>
+        </div>
+
+        <div class="contact-line">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <p>Golden, Colorado &middot; Aurora, Colorado</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="projects.js" defer></script>
+
+</body>
+</html>
