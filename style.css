@@ -193,21 +193,27 @@ a:focus-visible,
   padding-top: var(--space-3);
 }
 
+/* Title and dates side by side; when a card gets too narrow for both, the
+   dates wrap onto their own line under the title instead of running off. */
 .project-card__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--space-2);
+  gap: 0 var(--space-2);
   margin-bottom: 0.25rem;
 }
 
+/* A long repo name breaks mid-word rather than overflowing the card. */
 .project-card__row .project-card__title {
   margin-bottom: 0;
+  overflow-wrap: anywhere;
 }
 
+/* Left-aligned so the two date lines stay flush when they wrap under the title. */
 .project-card__stats {
   flex-shrink: 0;
-  text-align: right;
+  text-align: left;
   color: var(--color-muted);
   font-size: 0.875rem;
 }
@@ -254,18 +260,87 @@ a:focus-visible,
   border-bottom-color: var(--color-accent);
 }
 
-/* Simple standalone pages (About, Skills): deliberately not the homepage's
+/* Simple standalone pages (About, Resume, Skills): deliberately not the homepage's
    header/grid/sidebar - just a centered content column of their own. */
 
+/* width plus border-box gives every simple page the same column width: as an
+   item of the body grid, the auto inline margins alone would shrink it to its
+   content, so short-lined pages (Skills, Resume) came out narrower than About.
+   The max-width is 40rem of content plus the 3rem of horizontal padding. */
 .simple-page {
-  max-width: 40rem;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 43rem;
   margin-inline: auto;
   padding: var(--space-5) var(--space-3);
 }
 
+/* Page-to-page links at the top of the content column. Same fill and border
+   as .content-box, but square corners so it reads as a bar, not a box. */
+.top-bar {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.top-bar__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Text stays white; hover, focus, and the current page get an accent
+   underline, the same idiom as .sidebar-nav a. */
+.top-bar__links a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.top-bar__links a:hover,
+.top-bar__links a:focus-visible,
+.top-bar__links a[aria-current="page"] {
+  border-bottom-color: var(--color-accent);
+}
+
+/* The resume PDF, shown in the browser's own viewer. Tall enough to read a
+   page without scrolling the outer page; the link below it is the fallback
+   for browsers (mostly phones) that only render the first page or nothing. */
+.resume-embed {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-bg);
+}
+
+.resume-link {
+  margin: var(--space-2) 0 0;
+}
+
+/* Rounded-rectangle button, hover treatment matches .slideshow__arrow. */
 .back-link {
   display: inline-block;
   margin-bottom: var(--space-4);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .content-box {
